@@ -1,0 +1,25 @@
+env:
+  browser: true
+  es2021: true
+  node: true
+extends:
+  - plugin:vue/recommended
+  - xo
+  - prettier
+parserOptions:
+  ecmaVersion: latest
+  parser: '@typescript-eslint/parser'
+  sourceType: module
+plugins:
+  - vue
+  - '@typescript-eslint'
+  - prettier
+rules:
+  {
+    'prettier/prettier': 'error',
+    'arrow-body-style': 'off',
+    'prefer-arrow-callback': 'off',
+
+    'no-empty-static-block': 'off',
+    'no-new-native-nonconstructor': 'off'
+  }

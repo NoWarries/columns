@@ -1,0 +1,10 @@
+:root {
+  --primary: #e3dfd8;
+  --on-primary: #1c2027;
+
+  --sidebar: #f3f0ec;
+  --on-sidebar: #181b23;
+
+  --primary-accent: #326a6a;
+  --on-primary-accent: #f3f0ec;
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Vite",
+    "url": "https://vitejs.dev/",
+    "useCase": "Build tooling",
+    "license": "MIT",
+    "licenseUrl": "https://github.com/vitejs/vite/blob/main/LICENSE"
+  },
+  {
+    "name": "highlight.js",
+    "url": "https://highlightjs.org/",
+    "useCase": "Syntax highlighting",
+    "license": "BSD 3-Clause",
+    "licenseUrl": "https://github.com/highlightjs/highlight.js/blob/main/LICENSE"
+  },
+  {
+    "name": "tabler-icons",
+    "url": "https://tabler-icons.io/",
+    "useCase": "Icons",
+    "license": "MIT",
+    "licenseUrl": "https://github.com/tabler/tabler-icons/blob/master/LICENSE"
+  },
+  {
+    "name": "Vue.js",
+    "url": "https://vuejs.org/",
+    "useCase": "Javascript framework",
+    "license": "MIT",
+    "licenseUrl": "https://github.com/vuejs/core/blob/main/LICENSE"
+  },
+  {
+    "name": "Tailwind CSS",
+    "url": "https://tailwindcss.com/",
+    "useCase": "CSS framework",
+    "license": "MIT",
+    "licenseUrl": "https://github.com/tailwindlabs/tailwindcss/blob/master/LICENSE"
+  },
+  {
+    "name": "PostCSS",
+    "url": "https://postcss.org/",
+    "useCase": "CSS transforming",
+    "license": "MIT",
+    "licenseUrl": "https://github.com/postcss/postcss/blob/main/LICENSE"
+  }
+]
