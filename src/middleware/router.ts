@@ -7,8 +7,8 @@ import {
   IconInputSearch,
 } from '@tabler/icons-vue';
 
-import Landing from '../views/pages/LandingPage.vue';
-import Library from '../views/pages/LibraryPage.vue';
+import Landing from '../views/pages/LandingView.vue';
+import Library from '../views/pages/LibraryView.vue';
 import Explorer from '../views/pages/ExplorerView.vue';
 
 import Buttons from '../views/pages/categories/ButtonsCategory.vue';
