@@ -21,5 +21,5 @@ rules:
     'prefer-arrow-callback': 'off',
 
     'no-empty-static-block': 'off',
-    'no-new-native-nonconstructor': 'off'
+    'no-new-native-nonconstructor': 'off',
   }
