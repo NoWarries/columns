@@ -4,10 +4,12 @@ import {
   IconHome,
   IconArrowsRandom,
   IconScreenShare,
+  IconInputSearch,
 } from '@tabler/icons-vue';
 
 import Landing from '../views/pages/LandingPage.vue';
 import Library from '../views/pages/LibraryPage.vue';
+import Explorer from '../views/pages/ExplorerView.vue';
 
 import Buttons from '../views/pages/categories/ButtonsCategory.vue';
 import Misc from '../views/pages/categories/MiscCategory.vue';
@@ -20,6 +22,13 @@ const routes = [
     component: Landing,
     isNavItem: false,
     icon: IconHome,
+  },
+  {
+    path: import.meta.env.BASE_URL + 'explorer',
+    name: 'Explorer',
+    component: Explorer,
+    isNavItem: true,
+    icon: IconInputSearch,
   },
   {
     path: import.meta.env.BASE_URL + 'library',
