@@ -1,14 +1,15 @@
 <script>
+import SearchBar from '../components/SearchBar.vue';
 export default {
   name: 'ExplorerView',
+  components: { SearchBar },
 };
 </script>
 
 <template>
   <div>
-    <div role="toolbar">
-      <input type="text" role="searchbox" />
-      <button type="button">Search</button>
+    <div role="toolbar" class="m-5">
+      <SearchBar />
     </div>
   </div>
 </template>

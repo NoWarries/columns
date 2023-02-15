@@ -1,10 +1,21 @@
 :root {
+  /* Primary (surface) */
   --primary: #e3dfd8;
   --on-primary: #1c2027;
 
+  /* Primary accent */
+  --primary-accent: #326a6a;
+  --on-primary-accent: #f3f0ec;
+
+  /* Sidebar */
   --sidebar: #f3f0ec;
   --on-sidebar: #181b23;
 
-  --primary-accent: #326a6a;
-  --on-primary-accent: #f3f0ec;
+  /* Searchbar */
+  --searchbar: #f3f0ec;
+  --on-searchbar: #181b23;
+  --searchbar-button: #3a3835;
+  --on-searchbar-button: #f3f0ec;
+  --searchbar-button-hover: #7f7666;
+  --on-searchbar-button-hover: #f3f0ec;
 }
