@@ -2,6 +2,7 @@
 import webLib from '../../lib/libary/websiteLibraries.json';
 
 export default {
+  name: 'LibraryView',
   data() {
     return {
       websiteLibraries: webLib,

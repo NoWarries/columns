@@ -13,6 +13,7 @@ if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
 import { IconBooks, IconBrandGithub } from '@tabler/icons-vue';
 
 export default {
+  name: 'LandingView',
   components: { IconBooks, IconBrandGithub },
   data() {
     return {
