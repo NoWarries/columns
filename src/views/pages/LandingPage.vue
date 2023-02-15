@@ -23,7 +23,7 @@ export default {
 </script>
 
 <template>
-  <div class="content m-auto w-11/12 text-center">
+  <div>
     <img class="m-auto w-48 p-5" :src="logo" alt="Application logo" />
     <h1>Column Components</h1>
     <p>

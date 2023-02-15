@@ -5,7 +5,7 @@ import Sidenav from './views/components/SideNav.vue';
 <template>
   <div id="grid" class="h-full w-full">
     <Sidenav />
-    <main>
+    <main class="content m-auto h-full w-11/12 w-full text-center">
       <!-- outlet -->
       <router-view />
     </main>
