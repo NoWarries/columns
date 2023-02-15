@@ -1,5 +1,5 @@
 <script>
-import SearchBar from '../components/SearchBar.vue';
+import SearchBar from '../components/website/SearchBar.vue';
 export default {
   name: 'ExplorerView',
   components: { SearchBar },

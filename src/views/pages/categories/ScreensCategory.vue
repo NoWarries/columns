@@ -1,6 +1,6 @@
 <script lang="ts">
 import Container from '../../components/MainContainer.vue';
-import SimpleTwoFactorAuthenticationScreen from '../../components/screens/SimpleTwoFactorAuthenticationScreen.vue';
+import SimpleTwoFactorAuthenticationScreen from '../../components/content/screens/SimpleTwoFactorAuthenticationScreen.vue';
 export default {
   components: { SimpleTwoFactorAuthenticationScreen, Container },
 };

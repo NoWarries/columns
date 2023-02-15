@@ -1,6 +1,6 @@
 <script lang="ts">
-import GenericButton from '../../components/buttons/GenericButton.vue';
-import DualButton from '../../components/buttons/DualButton.vue';
+import GenericButton from '../../components/content/buttons/GenericButton.vue';
+import DualButton from '../../components/content/buttons/DualButton.vue';
 import MainContainer from '../../components/MainContainer.vue';
 export default {
   components: { MainContainer, DualButton, GenericButton },
