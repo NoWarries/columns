@@ -1,16 +1,16 @@
 <script lang="ts">
 import GenericButton from '../../components/content/buttons/GenericButton.vue';
 import DualButton from '../../components/content/buttons/DualButton.vue';
-import MainContainer from '../../components/MainContainer.vue';
+import Container from '../../components/MainContainer.vue';
+import GenericCategory from './GenericCategory.vue';
 export default {
-  components: { MainContainer, DualButton, GenericButton },
+  components: { GenericCategory, Container, DualButton, GenericButton },
 };
 </script>
 
 <template>
-  <div class="content m-auto w-11/12">
-    <h2>Simple buttons</h2>
-    <MainContainer :can-edit-scheme="true">
+  <GenericCategory title="Buttons">
+    <Container mark-raw :can-edit-scheme="true" title="Simple buttons">
       <div class="mx-1 flex p-5">
         <!-- Basic blue button -->
         <GenericButton
@@ -21,10 +21,9 @@ export default {
           class="cursor-pointer rounded bg-rose-600 p-2.5 font-semibold text-white transition-all hover:bg-rose-700"
         />
       </div>
-    </MainContainer>
+    </Container>
 
-    <h2>Outlined buttons</h2>
-    <MainContainer scheme="dark">
+    <Container scheme="dark" title="Outlined buttons">
       <div class="mx-1 flex p-5">
         <!-- Basic green outlined button -->
         <GenericButton
@@ -34,10 +33,9 @@ export default {
           tailwind="border-green-300 text-white border-solid rounded border-2 p-2.5 font-semibold transition-all cursor-pointer hover:underline"
         />
       </div>
-    </MainContainer>
+    </Container>
 
-    <h2>Dual buttons</h2>
-    <MainContainer :can-edit-scheme="true">
+    <Container :can-edit-scheme="true" title="Dual buttons">
       <div class="mx-1 flex gap-2.5 p-5">
         <!-- Simple DualButton -->
         <DualButton
@@ -52,8 +50,8 @@ export default {
           tailwind-button-two="rounded-r bg-blue-500 hover:bg-blue-600"
         />
       </div>
-    </MainContainer>
-  </div>
+    </Container>
+  </GenericCategory>
 </template>
 
 <style scoped></style>

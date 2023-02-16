@@ -1,21 +1,28 @@
 <script lang="ts">
 import Container from '../../components/MainContainer.vue';
 import SimpleTwoFactorAuthenticationScreen from '../../components/content/screens/SimpleTwoFactorAuthenticationScreen.vue';
+import GenericCategory from './GenericCategory.vue';
 export default {
-  components: { SimpleTwoFactorAuthenticationScreen, Container },
+  components: {
+    GenericCategory,
+    SimpleTwoFactorAuthenticationScreen,
+    Container,
+  },
 };
 </script>
 
 <template>
-  <div class="content m-auto w-11/12">
-    <h2>Simple two-factor authentication screen</h2>
-    <Container :can-edit-scheme="true">
+  <GenericCategory title="Screens">
+    <Container
+      :can-edit-scheme="true"
+      title="Simple two-factor authentication screen"
+    >
       <div class="mx-1 flex gap-2.5 p-5">
         <!-- Component -->
         <SimpleTwoFactorAuthenticationScreen />
       </div>
     </Container>
-  </div>
+  </GenericCategory>
 </template>
 
 <style scoped></style>

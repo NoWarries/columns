@@ -11,11 +11,10 @@
   --sidebar: #f3f0ec;
   --on-sidebar: #181b23;
 
-  /* Searchbar */
-  --searchbar: #f3f0ec;
-  --on-searchbar: #181b23;
-  --searchbar-button: #3a3835;
-  --on-searchbar-button: #f3f0ec;
-  --searchbar-button-hover: #7f7666;
-  --on-searchbar-button-hover: #f3f0ec;
+  /* Filter */
+  --filter-item: #f3f0ec;
+  --on-filter-item: #181b23;
+
+  --filter-chip: #111217;
+  --on-filter-chip: #f3f0ec;
 }

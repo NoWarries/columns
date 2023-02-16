@@ -2,7 +2,6 @@ import { createRouter, createWebHistory } from 'vue-router';
 import {
   IconXboxB,
   IconHome,
-  IconArrowsRandom,
   IconScreenShare,
   IconInputSearch,
 } from '@tabler/icons-vue';
@@ -12,7 +11,6 @@ import Library from '../views/pages/LibraryView.vue';
 import Explorer from '../views/pages/ExplorerView.vue';
 
 import Buttons from '../views/pages/categories/ButtonsCategory.vue';
-import Misc from '../views/pages/categories/MiscCategory.vue';
 import Screens from '../views/pages/categories/ScreensCategory.vue';
 
 const routes = [
@@ -49,13 +47,6 @@ const routes = [
     component: Screens,
     isNavItem: true,
     icon: IconScreenShare,
-  },
-  {
-    path: import.meta.env.BASE_URL + 'misc',
-    name: 'Miscellaneous',
-    component: Misc,
-    isNavItem: false,
-    icon: IconArrowsRandom,
   },
 ];
 

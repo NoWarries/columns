@@ -1,13 +1,19 @@
-<script>
+<script lang="ts">
 import { IconSearch } from '@tabler/icons-vue';
 export default {
   name: 'SearchBar',
   components: { IconSearch },
+  emits: ['changedQuery'],
+  data() {
+    return {
+      query: null,
+    };
+  },
 };
 </script>
 
 <template>
-  <form>
+  <div>
     <label for="searchBar" class="sr-only">Search</label>
     <div class="relative flex flex-row">
       <div class="absolute inset-y-0 flex items-center">
@@ -15,32 +21,20 @@ export default {
       </div>
       <input
         id="searchBar"
+        v-model="query"
         type="text"
-        class="block w-11/12 rounded-lg border p-2.5 pl-10"
+        class="block w-full rounded-lg border p-2.5 pl-10"
         placeholder="Search..."
         required
+        @input="$emit('changedQuery', query)"
       />
-      <button
-        type="submit"
-        class="right-2.5 bottom-2.5 mx-2.5 block w-1/12 min-w-fit rounded-lg p-2.5"
-      >
-        Search
-      </button>
     </div>
-  </form>
+  </div>
 </template>
 
 <style scoped>
 input {
-  background: var(--searchbar);
-  color: var(--on-searchbar);
-}
-button {
-  background: var(--searchbar-button);
-  color: var(--on-searchbar-button);
-}
-button:hover {
-  background: var(--searchbar-button-hover);
-  color: var(--on-searchbar-button-hover);
+  background: var(--filter-item);
+  color: var(--on-filter-item);
 }
 </style>

@@ -25,6 +25,10 @@ export default defineComponent({
     IconCopy,
   },
   props: {
+    title: {
+      type: String,
+      default: 'Lorem Ipsum',
+    },
     canEditScheme: {
       type: Boolean,
       default: false,
@@ -90,46 +94,49 @@ export default defineComponent({
 </script>
 
 <template>
-  <div
-    class="container w-full rounded"
-    :class="[{ fullscreen: fullscreen }, colorScheme]"
-  >
-    <div id="preview" class="mx-2.5 overflow-auto">
-      <slot>
-        <!-- Slot renders here -->
-      </slot>
-    </div>
+  <div>
+    <h2>{{ title }}</h2>
+    <div
+      class="container w-full rounded"
+      :class="[{ fullscreen: fullscreen }, colorScheme]"
+    >
+      <div id="preview" class="mx-2.5 overflow-auto">
+        <slot>
+          <!-- Slot renders here -->
+        </slot>
+      </div>
 
-    <div role="menu" class="menu flex gap-2 px-5 py-2.5">
-      <button
-        v-if="canEditScheme"
-        title="Toggle colorscheme"
-        type="button"
-        @click="toggleScheme"
-      >
-        <IconMoonFilled v-if="colorScheme === 'light'" />
-        <IconSunFilled v-if="colorScheme === 'dark'" />
-      </button>
+      <div role="menu" class="menu flex gap-2 px-5 py-2.5">
+        <button
+          v-if="canEditScheme"
+          title="Toggle colorscheme"
+          type="button"
+          @click="toggleScheme"
+        >
+          <IconMoonFilled v-if="colorScheme === 'light'" />
+          <IconSunFilled v-if="colorScheme === 'dark'" />
+        </button>
 
-      <button title="Get code" type="button" @click="getSlot">
-        <IconCode />
-      </button>
+        <button title="Get code" type="button" @click="getSlot">
+          <IconCode />
+        </button>
 
-      <button title="Fullscreen" type="button" @click="toggleFullscreen">
-        <IconArrowsMaximize />
-      </button>
+        <button title="Fullscreen" type="button" @click="toggleFullscreen">
+          <IconArrowsMaximize />
+        </button>
 
-      <button
-        v-if="highlight.length > 0"
-        title="Copy code"
-        type="button"
-        @click="copyCode"
-      >
-        <IconCopy />
-      </button>
-    </div>
-    <div v-if="highlight.length > 0" id="highlightBox">
-      <highlightjs language="xml" :code="highlight" />
+        <button
+          v-if="highlight.length > 0"
+          title="Copy code"
+          type="button"
+          @click="copyCode"
+        >
+          <IconCopy />
+        </button>
+      </div>
+      <div v-if="highlight.length > 0" id="highlightBox" class="text-left">
+        <highlightjs language="xml" :code="highlight" />
+      </div>
     </div>
   </div>
 </template>
