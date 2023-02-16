@@ -24,7 +24,7 @@ export default defineComponent({
     queryUpdate(newQuery: String) {
       this.filter.query = newQuery;
     },
-    categorySelectionUpdate(newSelection: any) {
+    categorySelectionUpdate(newSelection: string[]) {
       this.filter.categorySelection = newSelection;
     },
   },

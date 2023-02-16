@@ -9,17 +9,18 @@ export default defineComponent({
   data() {
     return {
       categories: ['Button', 'Screen', 'Lorem Ipsum'],
-      selection: [],
+      selection: [] as string[],
     };
   },
   methods: {
-    addSelection(event: { target: { value: string } }) {
-      this.selection.push(event.target.value);
-      event.target.value = 'Choose a category';
-
+    addSelection(event: Event) {
+      const target = event.target as HTMLInputElement;
+      const value = target.value as string;
+      this.selection.push(value);
+      target.value = 'Choose a category';
       this.$emit('changedSelection', this.selection);
     },
-    removeSelection(oldSelection: { target: { value: string } }) {
+    removeSelection(oldSelection: string) {
       this.selection = this.selection.filter((e) => e !== oldSelection);
 
       this.$emit('changedSelection', this.selection);
@@ -39,7 +40,7 @@ export default defineComponent({
         <option selected>Choose a category</option>
         <option
           v-for="category in categories.filter(
-            (cat) => !selection.includes(cat)
+            (cat: string) => !selection.includes(cat)
           )"
           :key="category"
           :value="category"
