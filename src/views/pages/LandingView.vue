@@ -40,10 +40,10 @@ export default {
     <div class="menu m-auto flex gap-2.5 text-center">
       <ul class="m-auto flex flex-row gap-5 p-5">
         <li>
-          <a href="/columns/library">
+          <router-link to="/columns/library">
             <span id="icon"><IconBooks /></span>
             <span>OS Library</span>
-          </a>
+          </router-link>
         </li>
         <li>
           <a href="https://github.com/nowarries/columns" target="_blank">

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Sidenav from './views/components/SideNav.vue';
+import Sidenav from './views/components/website/SideNav.vue';
 </script>
 
 <template>

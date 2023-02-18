@@ -1,38 +1,62 @@
 <script lang="ts">
 import FilterSet from '../components/website/FilterSet.vue';
 
-import ButtonsCategory from './categories/ButtonsCategory.vue';
-import ScreensCategory from './categories/ScreensCategory.vue';
-import { markRaw } from 'vue';
+import { defineComponent, markRaw } from 'vue';
+import components from '../../lib/components';
 
-export default {
+export default defineComponent({
   name: 'ExplorerView',
   components: { FilterSet },
   data() {
     return {
-      categories: markRaw([
-        {
-          name: 'Buttons',
-          component: ButtonsCategory,
-        },
-        {
-          name: 'Screens',
-          component: ScreensCategory,
-        },
-      ]),
+      appliedFilter: {
+        query: '',
+        categorySelection: [] as string[],
+        tagSelection: [] as string[],
+      },
+      components: markRaw(components),
     };
   },
-};
+  mounted() {
+    console.log(components);
+  },
+  methods: {
+    updateFilter(newFilter: any) {
+      this.appliedFilter = newFilter;
+    },
+  },
+});
 </script>
 
 <template>
   <div>
     <div role="toolbar" class="m-5">
-      <FilterSet :categories="categories" />
+      <FilterSet :categories="components" @changed-filter="updateFilter" />
     </div>
 
-    <div v-for="category in categories" id="section" :key="category.name">
-      <component :is="category.component" />
+    <div class="m-auto block">
+      <div
+        v-for="component in components
+          .filter(
+            (component) =>
+              (appliedFilter.categorySelection.length <= 0 ||
+                component.category.some((category) =>
+                  appliedFilter.categorySelection.includes(category)
+                )) &&
+              (appliedFilter.tagSelection.length <= 0 ||
+                component.tag.every((tag) =>
+                  appliedFilter.tagSelection.includes(tag)
+                )) &&
+              (appliedFilter.query.length < 0 ||
+                component.name
+                  .toLowerCase()
+                  .includes(appliedFilter.query.toLowerCase()))
+          )
+          .sort((a, b) => a.name > b.name)"
+        :key="component.name"
+      >
+        <component :is="component.component" />
+      </div>
     </div>
   </div>
 </template>

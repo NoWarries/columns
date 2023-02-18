@@ -97,10 +97,10 @@ export default defineComponent({
   <div>
     <h2>{{ title }}</h2>
     <div
-      class="container w-full rounded"
+      class="m-auto w-11/12 rounded shadow"
       :class="[{ fullscreen: fullscreen }, colorScheme]"
     >
-      <div id="preview" class="mx-2.5 overflow-auto">
+      <div id="preview" class="flex overflow-auto p-2.5">
         <slot>
           <!-- Slot renders here -->
         </slot>
@@ -147,6 +147,7 @@ export default defineComponent({
   top: 0;
   left: 0;
   max-width: 100%;
+  min-width: 100%;
   height: 100%;
   z-index: 10;
   border-radius: 0;
@@ -154,12 +155,12 @@ export default defineComponent({
 .container {
   box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 }
-.light > .menu {
-  @apply bg-atom-one-light-divider;
-  @apply text-atom-one-light-fg;
-}
 .light {
   @apply bg-atom-one-light-bg;
+  @apply text-atom-one-light-fg;
+}
+.light > .menu {
+  @apply bg-atom-one-light-divider;
   @apply text-atom-one-light-fg;
 }
 .dark {

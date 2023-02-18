@@ -1,7 +1,7 @@
 <script lang="ts">
 import { IconMenu2, IconHome } from '@tabler/icons-vue';
 import { defineComponent } from 'vue';
-import { routes } from '../../middleware/router';
+import { routes } from '../../../middleware/router';
 
 export default defineComponent({
   name: 'SideNav',
@@ -35,27 +35,27 @@ export default defineComponent({
       <button v-if="windowWidth > 800" type="button" @click="collapseToggle">
         <IconMenu2 />
       </button>
-      <a v-if="windowWidth < 800" title="Homepage" href="/columns/">
+      <router-link v-if="windowWidth < 800" to="/columns/" title="Homepage">
         <IconHome />
-      </a>
+      </router-link>
 
       <div
         v-if="sizeState === 'open'"
         title="Homepage"
         class="w-full min-w-[15rem] text-center"
       >
-        <a href="/columns/"> Columns Components </a>
+        <router-link to="/columns/"> Columns Components </router-link>
       </div>
     </div>
 
     <ul>
       <li v-for="route in navRoutes" :key="route">
-        <a :href="route.path" class="flex">
+        <router-link :to="route.path" class="flex">
           <span>
             <component :is="route.icon" />
           </span>
           <span v-if="sizeState === 'open'" id="label">{{ route.name }}</span>
-        </a>
+        </router-link>
       </li>
     </ul>
   </div>

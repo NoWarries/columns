@@ -4,13 +4,13 @@ import { IconX } from '@tabler/icons-vue';
 import components from '../../../lib/components';
 
 export default defineComponent({
-  name: 'CategorySelector',
+  name: 'TagSelector',
   components: { IconX },
   emits: ['changedSelection'],
   data() {
     return {
       categories: components
-        .map((component) => component.category)
+        .map((component) => component.tag)
         .flatMap((c) => c)
         .filter((value, index, self) => self.indexOf(value) === index),
       selection: [] as string[],
@@ -41,7 +41,7 @@ export default defineComponent({
         class="block h-min rounded-lg border p-1 text-sm"
         @input="addSelection"
       >
-        <option selected>Choose a category</option>
+        <option selected>Choose a tag</option>
         <option
           v-for="category in categories.filter(
             (cat: string) => !selection.includes(cat)
@@ -57,7 +57,7 @@ export default defineComponent({
           v-for="selected in selection"
           id="selectedChip"
           :key="selected"
-          class="mx-2.5 inline-flex justify-center rounded-lg p-1 pl-5 text-center text-sm"
+          class="mx-2 inline-flex justify-center rounded-lg p-1 pl-5 text-center text-sm"
         >
           <span>{{ selected }}</span>
           <button class="ml-1" @click="() => removeSelection(selected)">
