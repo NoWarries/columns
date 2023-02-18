@@ -17,9 +17,6 @@ export default defineComponent({
       components: markRaw(components),
     };
   },
-  mounted() {
-    console.log(components);
-  },
   methods: {
     updateFilter(newFilter: any) {
       this.appliedFilter = newFilter;
