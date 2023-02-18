@@ -52,7 +52,7 @@ export default defineComponent({
                   .toLowerCase()
                   .includes(appliedFilter.query.toLowerCase()))
           )
-          .sort((a, b) => a.name > b.name)"
+          .sort((a, b) => (a.name > b.name ? 1 : -1))"
         :key="component.name"
       >
         <component :is="component.component" />

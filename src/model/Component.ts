@@ -6,25 +6,9 @@ export class Component {
   public scheme: string | undefined = undefined;
   public canEditScheme: boolean = false;
 
-  public component: {
-    data(): {
-      name: string;
-      tag: string[];
-      category: string[];
-      forceScheme: string | undefined;
-      canEditScheme: boolean;
-    };
-  };
+  public component: any;
 
-  constructor(component: {
-    data(): {
-      name: string;
-      tag: string[];
-      category: string[];
-      forceScheme: string | undefined;
-      canEditScheme: boolean;
-    };
-  }) {
+  constructor(component: any) {
     this.name = component.data().name;
     this.tag = component.data().tag;
     this.category = component.data().category;

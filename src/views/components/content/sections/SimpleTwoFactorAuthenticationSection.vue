@@ -9,7 +9,7 @@ export default {
     return {
       name: 'Simple two-factor authentication section',
       tag: [],
-      category: ['Screen', 'Section'],
+      category: ['Section'],
 
       forceScheme: undefined,
       canEditScheme: true,
