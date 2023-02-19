@@ -58,7 +58,7 @@ export default {
         <div id="actions" class="float-right">
           <input
             type="button"
-            class="m-2 cursor-pointer rounded bg-sky-400 p-2 p-1 text-white transition-all hover:bg-sky-500"
+            class="m-2 cursor-pointer rounded bg-sky-400 p-2 text-white transition-all hover:bg-sky-500"
             value="I understand"
           />
         </div>

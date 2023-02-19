@@ -53,14 +53,14 @@ export default {
         <div class="float-left">
           <input
             type="button"
-            class="m-2 cursor-pointer rounded bg-neutral-700 p-2 p-1 text-white transition-all hover:bg-neutral-800"
+            class="m-2 cursor-pointer rounded bg-neutral-700 p-2 text-white transition-all hover:bg-neutral-800"
             value="Cancel"
           />
         </div>
         <div id="actions" class="float-right">
           <input
             type="button"
-            class="m-2 cursor-pointer rounded bg-red-600 p-2 p-1 text-white transition-all hover:bg-red-700"
+            class="m-2 cursor-pointer rounded bg-red-600 p-2 text-white transition-all hover:bg-red-700"
             value="Delete"
           />
         </div>
