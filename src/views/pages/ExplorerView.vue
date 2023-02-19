@@ -41,9 +41,10 @@ export default defineComponent({
                   appliedFilter.categorySelection.includes(category)
                 )) &&
               (appliedFilter.tagSelection.length <= 0 ||
-                component.tag.every((tag) =>
-                  appliedFilter.tagSelection.includes(tag)
-                )) &&
+                (component.tag.length > 0 &&
+                  component.tag.every((tag) =>
+                    appliedFilter.tagSelection.includes(tag)
+                  ))) &&
               (appliedFilter.query.length < 0 ||
                 component.name
                   .toLowerCase()
