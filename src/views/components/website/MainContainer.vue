@@ -7,6 +7,7 @@ import {
   IconCopy,
 } from '@tabler/icons-vue';
 import { defineComponent } from 'vue';
+import { HtmlService } from '../../../service/HtmlService';
 
 let defaultColorScheme = 'dark';
 const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -14,6 +15,8 @@ const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 if (!isDark) {
   defaultColorScheme = 'light';
 }
+
+const htmlService = new HtmlService();
 
 export default defineComponent({
   name: 'MainContainer',
@@ -63,40 +66,15 @@ export default defineComponent({
         return;
       }
 
-      this.highlight = this.format(
+      this.highlight = htmlService.format(
         this.$el.querySelector('#preview').innerHTML
       );
     },
     copyCode() {
-      const text = this.format(this.$el.querySelector('#preview').innerHTML);
+      const text = htmlService.format(
+        this.$el.querySelector('#preview').innerHTML
+      );
       navigator.clipboard.writeText(text);
-    },
-    format(html: String) {
-      let result = '';
-      let indent = '';
-
-      html.split(/>\s*</).forEach(function (element) {
-        if (element.match(/^\/\w/)) {
-          indent = indent.substring('\x09'.length);
-        }
-
-        console.log(indent, element.startsWith('svg'));
-        if (element.startsWith('svg')) {
-          result +=
-            indent +
-            '<!-- Icon/Image goes here (css or classes may apply --> \n' +
-            indent +
-            '<!-- This projecty uses https://tabler-icons.io/ (MIT) --> \r\n';
-        }
-
-        result += indent + '<' + element + '>\r\n';
-
-        if (element.match(/^<?\w[^>]*[^/]$/) && !element.startsWith('input')) {
-          indent += '\x09';
-        }
-      });
-
-      return result.substring(1, result.length - 3);
     },
   },
 });
