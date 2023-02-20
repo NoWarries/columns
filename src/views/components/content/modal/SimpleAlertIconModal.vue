@@ -33,8 +33,6 @@ export default {
         <div class="flex">
           <div id="icon" class="flex items-center">
             <div id="iconContainer" class="m-2.5 rounded-full bg-red-200 p-2.5">
-              <!-- Icon goes here -->
-              <!-- Classes applied : h-6 w-6 text-gray-700 -->
               <IconAlertTriangle class="h-6 w-6 text-gray-700" />
             </div>
           </div>

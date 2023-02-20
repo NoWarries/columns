@@ -27,9 +27,6 @@ export default {
     <div class="m-auto flex flex-col">
       <div class="text-center">
         <div class="flex items-center">
-          <!-- App icon or shield icon goes here -->
-
-          <!-- Classes applied to svg are : text-green-500 w-full h-12 -->
           <IconShield class="h-12 w-full text-green-500" />
         </div>
         <h1 class="text-2xl font-semibold">Two-factor authentication</h1>

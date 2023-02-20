@@ -30,7 +30,6 @@ export default defineComponent({
     <div role="toolbar" class="m-5">
       <FilterSet :categories="components" @changed-filter="updateFilter" />
     </div>
-
     <div class="m-auto block">
       <div
         v-for="component in components

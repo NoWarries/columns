@@ -80,6 +80,15 @@ export default defineComponent({
           indent = indent.substring('\x09'.length);
         }
 
+        console.log(indent, element.startsWith('svg'));
+        if (element.startsWith('svg')) {
+          result +=
+            indent +
+            '<!-- Icon/Image goes here (css or classes may apply --> \n' +
+            indent +
+            '<!-- This projecty uses https://tabler-icons.io/ (MIT) --> \r\n';
+        }
+
         result += indent + '<' + element + '>\r\n';
 
         if (element.match(/^<?\w[^>]*[^/]$/) && !element.startsWith('input')) {

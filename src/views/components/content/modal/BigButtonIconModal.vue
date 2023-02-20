@@ -36,8 +36,6 @@ export default {
               id="iconContainer"
               class="m-2.5 rounded-full bg-yellow-100 p-2.5"
             >
-              <!-- Icon goes here -->
-              <!-- Classes applied : h-6 w-6 text-gray-700 -->
               <IconError404 class="h-6 w-6 text-gray-700" />
             </div>
           </div>
