@@ -8,6 +8,7 @@ import {
 } from '@tabler/icons-vue';
 import { defineComponent } from 'vue';
 import { HtmlService } from '../../../service/HtmlService';
+import ChipList from './chip/ChipList.vue';
 
 let defaultColorScheme = 'dark';
 const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -21,6 +22,7 @@ const htmlService = new HtmlService();
 export default defineComponent({
   name: 'MainContainer',
   components: {
+    ChipList,
     IconMoonFilled,
     IconSunFilled,
     IconCode,
@@ -40,6 +42,14 @@ export default defineComponent({
       type: String,
       default: undefined,
     }, // If defined forces scheme to be used rather than default
+    category: {
+      type: Array,
+      default: undefined,
+    },
+    tag: {
+      type: Array,
+      default: undefined,
+    },
   },
   data(): any {
     return {
@@ -81,12 +91,26 @@ export default defineComponent({
 </script>
 
 <template>
-  <div>
-    <h2 class="m-2.5 text-2xl">{{ title }}</h2>
-    <div
-      class="m-auto w-11/12 rounded shadow"
-      :class="[{ fullscreen: fullscreen }, colorScheme]"
-    >
+  <div class="m-auto my-10 w-11/12" :class="colorScheme">
+    <div class="containerHeader p-2.5">
+      <h2 class="m-2.5 text-2xl">{{ title }}</h2>
+      <div
+        v-if="tag.length > 0"
+        class="chipContainer mx-12 mb-6 hidden flex-row rounded-lg px-5 py-2.5 shadow-xl md:flex"
+      >
+        <p class="flex w-fit flex-row items-center">Tags :</p>
+        <ChipList :list="tag" />
+      </div>
+      <br />
+      <div
+        v-if="category.length > 0"
+        class="chipContainer mx-12 mb-6 hidden flex-row rounded-lg px-5 py-2.5 shadow-xl md:flex"
+      >
+        <p class="flex w-fit flex-row items-center">Categories :</p>
+        <ChipList :list="category" />
+      </div>
+    </div>
+    <div class="m-auto rounded shadow" :class="[{ fullscreen: fullscreen }]">
       <div id="preview" class="flex overflow-auto p-2.5">
         <slot>
           <!-- Slot renders here -->
@@ -142,19 +166,26 @@ export default defineComponent({
 .container {
   box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 }
-.light {
+.light,
+.light .fullscreen,
+.light .chipContainer {
   @apply bg-atom-one-light-bg;
   @apply text-atom-one-light-fg;
 }
-.light > .menu {
+.light > div > .menu,
+.light .containerHeader {
   @apply bg-atom-one-light-divider;
   @apply text-atom-one-light-fg;
 }
-.dark {
+
+.dark,
+.dark .fullscreen,
+.dark .chipContainer {
   @apply bg-atom-one-dark-bg;
   @apply text-atom-one-dark-fg;
 }
-.dark > .menu {
+.dark > div > .menu,
+.dark .containerHeader {
   @apply bg-atom-one-dark-divider;
   @apply text-atom-one-dark-fg;
 }
