@@ -27,10 +27,10 @@ export default {
       class="relative m-auto flex w-full flex-col justify-center p-2.5 text-left text-black dark:text-white"
     >
       <div
-        class="m-auto m-2.5 inline-block w-11/12 rounded-lg bg-white p-2.5 shadow dark:bg-neutral-900"
+        class="m-auto my-2.5 inline-block w-11/12 rounded-lg bg-white p-2.5 shadow dark:bg-neutral-900"
       >
         <div id="title" class="border-b-2 border-solid dark:border-neutral-800">
-          <h1 class="mx-2.5">Modal</h1>
+          <h1 class="m-2.5 text-2xl">Modal</h1>
         </div>
         <div id="description" class="py-2.5">
           <p class="mx-2.5">Very important information goes here</p>

@@ -42,7 +42,7 @@ export default {
             </div>
           </div>
           <div>
-            <div id="title">
+            <div id="title" class="mt-2.5">
               <h1 class="mx-2.5 mb-1 text-2xl">No content found</h1>
             </div>
             <div id="description" class="pb-2.5">

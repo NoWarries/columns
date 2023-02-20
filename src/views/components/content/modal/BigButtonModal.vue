@@ -31,7 +31,7 @@ export default {
       >
         <div class="flex p-2.5">
           <div>
-            <div id="title">
+            <div id="title" class="mt-2.5">
               <h1 class="mx-2.5 mb-1 text-2xl">Publishing</h1>
             </div>
             <div id="description" class="mx-2.5 pb-2.5">

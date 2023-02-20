@@ -95,7 +95,7 @@ export default defineComponent({
 
 <template>
   <div>
-    <h2>{{ title }}</h2>
+    <h2 class="m-2.5 text-2xl">{{ title }}</h2>
     <div
       class="m-auto w-11/12 rounded shadow"
       :class="[{ fullscreen: fullscreen }, colorScheme]"

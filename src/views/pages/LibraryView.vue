@@ -13,7 +13,9 @@ export default {
 
 <template>
   <div class="content m-auto w-11/12 text-center">
-    <h1>Column Components : <abbr title="Open Source">OS</abbr> Library</h1>
+    <h1 class="m-2.5 text-2xl">
+      Column Components : <abbr title="Open Source">OS</abbr> Library
+    </h1>
     <p>
       Website is build using various technologies, below I listed some of the
       most crucial ones. Also check out the
@@ -25,7 +27,7 @@ export default {
       >.
     </p>
     <div class="flex flex-col items-center">
-      <h2>Website</h2>
+      <h2 class="m-4 text-xl">Website</h2>
       <table class="w-10/12 table-fixed">
         <thead>
           <tr>

@@ -22,19 +22,3 @@ body {
   grid-template-rows: 1fr;
   grid-template-columns: min-content 1fr;
 }
-
-// Font styling
-h1,
-h2,
-h3 {
-  margin: 1rem;
-}
-h1 {
-  font-size: 2rem;
-}
-h2 {
-  font-size: 1.5rem;
-}
-h3 {
-  font-size: 1rem;
-}

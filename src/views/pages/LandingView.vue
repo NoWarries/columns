@@ -26,7 +26,7 @@ export default {
 <template>
   <div>
     <img class="m-auto w-48 p-5" :src="logo" alt="Application logo" />
-    <h1>Column Components</h1>
+    <h1 class="m-2.5 text-2xl">Column Components</h1>
     <p>
       Column Components is a personal/hobby collection of reusable/inspirational
       web components built using Tailwind CSS and html.
