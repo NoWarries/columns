@@ -4,6 +4,7 @@ import SimpleAlertIconModal from '../views/components/content/modal/SimpleAlertI
 import SimpleInfoIconModal from '../views/components/content/modal/SimpleInfoIconModal.vue';
 import BigButtonModal from '../views/components/content/modal/BigButtonIconModal.vue';
 import BigButtonIconModal from '../views/components/content/modal/BigButtonModal.vue';
+import LoginModal from '../views/components/content/modal/LoginModal.vue';
 
 import { Component } from '../model/Component';
 
@@ -14,4 +15,5 @@ export default [
   new Component(SimpleInfoIconModal),
   new Component(BigButtonModal),
   new Component(BigButtonIconModal),
+  new Component(LoginModal),
 ];
