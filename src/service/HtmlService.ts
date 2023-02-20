@@ -11,7 +11,7 @@ export class HtmlService {
       if (element.startsWith('svg')) {
         result +=
           indent +
-          '<!-- Icon/Image goes here (css or classes may apply --> \n' +
+          '<!-- Icon/Image goes here (css or classes may apply) --> \n' +
           indent +
           '<!-- This projecty uses https://tabler-icons.io/ (MIT) --> \r\n';
       }
