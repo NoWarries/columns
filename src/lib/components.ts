@@ -5,6 +5,7 @@ import SimpleInfoIconModal from '../views/components/content/modal/SimpleInfoIco
 import BigButtonModal from '../views/components/content/modal/BigButtonIconModal.vue';
 import BigButtonIconModal from '../views/components/content/modal/BigButtonModal.vue';
 import LoginModal from '../views/components/content/modal/LoginModal.vue';
+import ProgressBar from '../views/components/content/steps/ProgressBar.vue';
 
 import { Component } from '../model/Component';
 
@@ -16,4 +17,5 @@ export default [
   new Component(BigButtonModal),
   new Component(BigButtonIconModal),
   new Component(LoginModal),
+  new Component(ProgressBar),
 ];
