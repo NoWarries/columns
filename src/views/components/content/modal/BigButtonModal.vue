@@ -22,6 +22,8 @@ export default {
     :title="name"
     :can-edit-scheme="canEditScheme"
     :scheme="forceScheme"
+    :category="category"
+    :tag="tag"
   >
     <div
       class="relative m-auto flex w-full flex-col justify-center p-2.5 text-left text-black dark:text-white"

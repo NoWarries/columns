@@ -23,6 +23,8 @@ export default {
     :title="name"
     :can-edit-scheme="canEditScheme"
     :scheme="forceScheme"
+    :category="category"
+    :tag="tag"
   >
     <div class="m-auto flex flex-col">
       <div class="text-center">
