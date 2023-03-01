@@ -43,12 +43,12 @@ export default defineComponent({
       default: undefined,
     }, // If defined forces scheme to be used rather than default
     category: {
-      type: Array,
-      default: undefined,
+      type: Array<string>,
+      default: {},
     },
     tag: {
-      type: Array,
-      default: undefined,
+      type: Array<string>,
+      default: {},
     },
   },
   data(): any {

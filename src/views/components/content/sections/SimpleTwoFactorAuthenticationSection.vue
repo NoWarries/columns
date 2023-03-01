@@ -8,7 +8,7 @@ export default {
   data() {
     return {
       name: 'Simple two-factor authentication section',
-      tag: [],
+      tag: ['Icons'],
       category: ['Section'],
 
       forceScheme: undefined,

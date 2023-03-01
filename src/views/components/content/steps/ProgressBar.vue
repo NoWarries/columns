@@ -19,7 +19,7 @@ export default {
   data() {
     return {
       name: 'Steps progress bar',
-      tag: [],
+      tag: ['Icons'],
       category: ['Steps'],
 
       forceScheme: undefined,
@@ -34,6 +34,8 @@ export default {
     :title="name"
     :can-edit-scheme="canEditScheme"
     :scheme="forceScheme"
+    :category="category"
+    :tag="tag"
   >
     <div class="flex w-full flex-col">
       <div class="m-4 flex justify-around">

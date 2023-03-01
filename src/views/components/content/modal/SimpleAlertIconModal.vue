@@ -8,7 +8,7 @@ export default {
   data() {
     return {
       name: 'Simple alert icon modal',
-      tag: [],
+      tag: ['Icons'],
       category: ['Modal'],
 
       forceScheme: undefined,

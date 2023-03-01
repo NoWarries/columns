@@ -17,7 +17,7 @@ export default {
   data() {
     return {
       name: 'Vertical Icon Timeline',
-      tag: [],
+      tag: ['Icons'],
       category: ['Timeline'],
 
       forceScheme: undefined,
@@ -32,6 +32,8 @@ export default {
     :title="name"
     :can-edit-scheme="canEditScheme"
     :scheme="forceScheme"
+    :category="category"
+    :tag="tag"
   >
     <div class="text-left">
       <div id="event-1" class="m-2.5 flex w-fit flex-row rounded-lg">
