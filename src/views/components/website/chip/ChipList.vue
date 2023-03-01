@@ -5,7 +5,7 @@ export default {
   components: { OneChip },
   props: {
     list: {
-      type: Array,
+      type: Array<string>,
       default: undefined,
     },
     rounded: {
