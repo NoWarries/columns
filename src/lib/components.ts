@@ -6,6 +6,7 @@ import BigButtonModal from '../views/components/content/modal/BigButtonIconModal
 import BigButtonIconModal from '../views/components/content/modal/BigButtonModal.vue';
 import LoginModal from '../views/components/content/modal/LoginModal.vue';
 import ProgressBar from '../views/components/content/steps/ProgressBar.vue';
+import VericalIconTimeline from '../views/components/content/timeline/VericalIconTimeline.vue';
 
 import { Component } from '../model/Component';
 
@@ -18,4 +19,5 @@ export default [
   new Component(BigButtonIconModal),
   new Component(LoginModal),
   new Component(ProgressBar),
+  new Component(VericalIconTimeline),
 ];
