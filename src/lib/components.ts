@@ -1,3 +1,5 @@
+import { Component } from '../model/Component';
+
 import SimpleTwoFactorAuthenticationSection from '../views/components/content/sections/SimpleTwoFactorAuthenticationSection.vue';
 import SimpleModal from '../views/components/content/modal/SimpleModal.vue';
 import SimpleAlertIconModal from '../views/components/content/modal/SimpleAlertIconModal.vue';
@@ -7,8 +9,7 @@ import BigButtonIconModal from '../views/components/content/modal/BigButtonModal
 import LoginModal from '../views/components/content/modal/LoginModal.vue';
 import ProgressBar from '../views/components/content/steps/ProgressBar.vue';
 import VericalIconTimeline from '../views/components/content/timeline/VericalIconTimeline.vue';
-
-import { Component } from '../model/Component';
+import EventCard from '../views/components/content/card/EventCard.vue';
 
 export default [
   new Component(SimpleTwoFactorAuthenticationSection),
@@ -20,4 +21,5 @@ export default [
   new Component(LoginModal),
   new Component(ProgressBar),
   new Component(VericalIconTimeline),
+  new Component(EventCard),
 ];
